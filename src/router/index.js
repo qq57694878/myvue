@@ -13,12 +13,17 @@ import AdminLog from '@/components/demo/adminLog'
 import AdminUser from '@/components/demo/adminUser'
 import AdminHelp from '@/components/demo/adminHelp'
 import Element from '@/components/element-ui/Element.vue'
+import Index from '@/components/frame/Index.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
+      components: {default: Index}
+    },
+    {
+      path: '/admin-index',
       components: {default: AdminIndex}
     },
     {

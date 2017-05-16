@@ -17,102 +17,49 @@
 
 -->
 <template>
-  <div id="app">
-  <header class="am-topbar am-topbar-inverse admin-header">
-    <div class="am-topbar-brand">
-      <strong>Amaze UI</strong> <small>后台管理模板</small>
-    </div>
+  <div id="app" class="l-app">
+  <header class="l-header">
 
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
-
-    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
-
-      <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-        <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
-        <li class="am-dropdown" data-am-dropdown>
-          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-            <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
-          </a>
-          <ul class="am-dropdown-content">
-            <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
-            <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-            <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
-          </ul>
-        </li>
-        <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
-      </ul>
-    </div>
   </header>
 
-  <div class="am-cf admin-main">
+  <div class="l-body">
     <!-- sidebar start -->
-    <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
-      <div class="am-offcanvas-bar admin-offcanvas-bar">
-        <ul class="am-list admin-sidebar-list">
-          <li><router-link :to="{path: '/' }" exact><span class="am-icon-home"></span> 首页</router-link></li>
-          <li class="admin-parent">
-            <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-            <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-              <li><router-link :to="{path: '/admin-user'}" class="am-cf"><span class="am-icon-check"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></router-link></li>
-              <li><router-link :to="{path: '/admin-help'}"><span class="am-icon-puzzle-piece"></span> 帮助页</router-link></li>
-              <li><router-link :to="{path: '/admin-gallery'}"><span class="am-icon-th"></span> 相册页面<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></router-link></li>
-              <li><router-link :to="{path: '/admin-log'}"><span class="am-icon-calendar"></span> 系统日志</router-link></li>
-              <li><router-link :to="{path: '/admin-404'}"><span class="am-icon-bug"></span> 404</router-link></li>
-            </ul>
-          </li>
-          <li><router-link :to="{path: '/admin-table'}"  ><span class="am-icon-table"></span> 表格</router-link></li>
-          <li><router-link :to="{path: '/admin-form'}"  ><span class="am-icon-pencil-square-o"></span> 表单</router-link></li>
-          <li><router-link :to="{path: '/'}" href="#"><span class="am-icon-sign-out"></span> 注销</router-link></li>
-        </ul>
-
-        <div class="am-panel am-panel-default admin-sidebar-panel">
-          <div class="am-panel-bd">
-            <p><span class="am-icon-bookmark"></span> 公告</p>
-            <p>时光静好，与君语；细水流年，与君同。—— ljl</p>
-          </div>
-        </div>
-
-        <div class="am-panel am-panel-default admin-sidebar-panel">
-          <div class="am-panel-bd">
-            <p><span class="am-icon-tag"></span> wiki</p>
-            <p>Welcome to the vue !</p>
-          </div>
-        </div>
-      </div>
+    <div class="l-menu">
+      <ul class="am-list ">
+        <li><router-link :to="{path: '/' }" exact><span class="am-icon-home"></span> 首页</router-link></li>
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse " id="collapse-nav">
+            <li><router-link :to="{path: '/admin-user'}" class="am-cf"><span class="am-icon-check"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></router-link></li>
+            <li><router-link :to="{path: '/admin-help'}"><span class="am-icon-puzzle-piece"></span> 帮助页</router-link></li>
+            <li><router-link :to="{path: '/admin-gallery'}"><span class="am-icon-th"></span> 相册页面<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></router-link></li>
+            <li><router-link :to="{path: '/admin-log'}"><span class="am-icon-calendar"></span> 系统日志</router-link></li>
+            <li><router-link :to="{path: '/admin-404'}"><span class="am-icon-bug"></span> 404</router-link></li>
+          </ul>
+        </li>
+        <li><router-link :to="{path: '/admin-table'}"  ><span class="am-icon-table"></span> 表格</router-link></li>
+        <li><router-link :to="{path: '/admin-form'}"  ><span class="am-icon-pencil-square-o"></span> 表单</router-link></li>
+        <li><router-link :to="{path: '/'}" href="#"><span class="am-icon-sign-out"></span> 注销</router-link></li>
+      </ul>
     </div>
     <!-- sidebar end -->
-
     <!-- content start -->
-    <transition name = "fade">
-      <router-view></router-view>
-    </transition>
+     <div class="l-content">
+       <transition name = "fade">
+         <router-view ></router-view>
+       </transition>
+     </div>
     <!-- content end -->
   </div>
 
-  <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
-
-  <footer>
+  <footer class="l-footer">
     <hr>
-    <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+    <p class="am-padding-left">© 2017 ljl</p>
   </footer>
   </div>
 </template>
 
 <script>
-  (function ($) {
-    'use strict'
-
-    $(function () {
-      var $fullText = $('.admin-fullText')
-      $('#admin-fullscreen').on('click', function () {
-        $.AMUI.fullscreen.toggle()
-      })
-
-      $(document).on($.AMUI.fullscreen.raw.fullscreenchange, function () {
-        $fullText.text($.AMUI.fullscreen.isFullscreen ? '退出全屏' : '开启全屏')
-      })
-    })
-  })(window.jQuery)
 
   export default {
     name: 'app'
@@ -120,12 +67,46 @@
 </script>
 
 <style scoped>
-#app{
-  height: 100%;
+.l-app{
+  width:100%;
   overflow: hidden;
-  margin: 0;
   position: relative;
-  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #eee;
+}
+.l-body{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width:100%;
+
+}
+.l-menu{
+  flex: 0 0 150px;
+  border-right:1px solid #ddd;
+}
+.l-content{
+  flex:1 1 auto;
+  display: flex;
+}
+.l-header,.l-footer{
+  width:100%;
+  background: #0e90d2;
+  flex: 0 0 45px;
+}
+.l-footer{
+  display: flex;
+  justify-content: center;
 }
   .router-link-active {
     background: #ccc;
