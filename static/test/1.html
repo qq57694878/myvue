@@ -20,6 +20,35 @@
     }
 
   </style>
+  <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    $(document).bind({
+      dragleave: function (e) {
+        e.preventDefault();
+        if(input.data('value') || area.find('img').length)
+          instructions.removeClass('over').empty();
+        else
+          instructions.removeClass('over').html(s.instructions);
+      },
+      drop: function (e) {
+        e.preventDefault();
+        if(input.data('value') || area.find('img').length)
+          instructions.removeClass('over').empty();
+        else
+          instructions.removeClass('over').html(s.instructions);
+      },
+      dragenter: function (e) {
+        e.preventDefault();
+        instructions.addClass('instructions over').html(s.over);
+      },
+      dragover: function (e) {
+        e.preventDefault();
+        instructions.addClass('instructions over').html(s.over);
+      }
+    });
+
+  </script>
 </head>
 <body>
 <DIV class="c0">
