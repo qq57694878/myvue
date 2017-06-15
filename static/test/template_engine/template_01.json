@@ -1,0 +1,63 @@
+{
+  "controls":[
+    {
+      "type" : "layout24",
+      "id" : "layout24_1",
+      "children":[
+        {
+          "type" : "layout12",
+          "id" : "layout12_1",
+          "children":[
+            {
+              "type" : "layout24",
+              "id" : "layout24_03",
+              "children":[
+                {
+                  "type" : "input_text",
+                  "id" : "input_text_01",
+                  "options" :
+                  {
+                    "v-model":"data_p1",
+                    "onclick" : "input_text_01_onlick"
+                  }
+                }
+              ]
+            },
+            {
+              "type" : "layout24",
+              "id" : "layout24_04",
+              "children":[
+                {
+                  "type" : "input_text",
+                  "id" : "input_text_02",
+                  "options" :
+                  {
+                    "v-model":"data_p2",
+                    "onclick" : "input_text_02_onlick"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type" : "layout12",
+          "id" : "layout12_2",
+          "children":[
+            {
+              "type" : "textarea",
+              "id" : "textarea_02",
+              "options" :
+              {
+                "v-model":"data_p3",
+                "onclick" : "textarea_02_onlick"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+
+}

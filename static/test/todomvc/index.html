@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>todomvc</title>
+  <script src="../lib/jquery-3.2.1.js" type="text/javascript"></script>
+  <script src="../lib/vue.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="inputdata" @keyup.enter="add"/>
+  <ul>
+    <input type="checkbox" v-model="checkall">全选
+    <li v-for="(item,index) in listdata"><input type="checkbox" v-model="item.checked"><span>{{item.title}}</span>  <button @click="remove(index)">X</button></li>
+  </ul>
+</div>
+
+
+</body>
+</html>

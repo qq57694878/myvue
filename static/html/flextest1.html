@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+  height:100%;
+  width: 100%;
+  overflow: hidden;
+}
+ul,li{
+  list-style: none;
+}
+  .wrap{
+    display:flex;
+    flex-flow: column wrap;
+    height:100%;
+    width:100%;
+  }
+  .header,.footer{
+    flex:0 0 50px;
+    background: #14a6ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main{
+    flex:1;
+    position:relative;
+  }
+  .main-inner{
+    position: absolute;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu{
+    flex:0 0 240px;
+    height:100%;
+    overflow-y: scroll;
+  }
+.menu li{
+  height: 45px;
+  line-height: 45px;
+}
+  .container{
+    flex:1 1 auto;
+    display: flex;
+    flex-flow: column wrap;
+    height:100%;
+    overflow-y: scroll;
+  }
+</style>
+<body>
+<div class="wrap">
+  <header class="header">
+      header
+  </header>
+  <div class="main">
+    <div class="main-inner">
+      <div class="menu">
+        <ul>
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单2</a></li>
+          <li><a href="#">菜单3</a></li>
+          <li><a href="#">菜单4</a></li>
+          <li><a href="#">菜单5</a></li>
+          <li><a href="#">菜单6</a></li>
+          <li><a href="#">菜单7</a></li>
+          <li><a href="#">菜单8</a></li>
+          <li><a href="#">菜单9</a></li>
+          <li><a href="#">菜单10</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+        sdfasdasdasdf<br>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    footer
+  </footer>
+</div>
+
+</body>
+</html>

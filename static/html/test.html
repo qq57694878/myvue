@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+&lt;!doctype html&gt;
+&lt;html lang&#x3D;&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+&lt;meta name&#x3D;&quot;viewport&quot;
+content&#x3D;&quot;width&#x3D;device-width, user-scalable&#x3D;no, initial-scale&#x3D;1.0, maximum-scale&#x3D;1.0, minimum-scale&#x3D;1.0&quot;&gt;
+&lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;
+&lt;title&gt;Document&lt;&#x2F;title&gt;
+&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;
+body,div,span{
+margin:0;
+padding:0;
+}
+
+.box{
+width:306px;
+height:306px;
+border: 1px solid  #ccc;
+}
+.item{
+width:100px;
+height:100px;
+border-radius:50%;
+border:1px solid #ccc;
+display:flex;
+flex-flow:row wrap;
+align-items:center;
+justify-content:center;
+}
+.box{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-between;
+align-items:flex-start;
+align-content:space-between;
+}
+
+&lt;&#x2F;style&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;div class&#x3D;&quot;box&quot;&gt;
+&lt;div class&#x3D;&quot;item&quot;&gt;1&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;item&quot;&gt;2&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;item&quot;&gt;3&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;item&quot;&gt;4&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;item&quot;&gt;5&lt;&#x2F;div&gt;
+&lt;!--
+&lt;div class&#x3D;&quot;item&quot;&gt;&lt;&#x2F;div&gt;
+--&gt;
+&lt;&#x2F;div&gt;
+&lt;code&gt;
+flex-direction属性决定主轴的方向（即项目的排列方向）。
+flex-direction: row | row-reverse | column | column-reverse;
+flex-wrap属性 默认情况下，项目都排在一条线（又称&quot;轴线&quot;）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
+flex-wrap: nowrap | wrap | wrap-reverse;
+flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+flex-flow: flex-direction || flex-wrap
+justify-content属性定义了项目在主轴上的对齐方式。
+justify-content: flex-start | flex-end | center | space-between | space-around;
+align-items属性定义项目在交叉轴上如何对齐。
+align-items: flex-start | flex-end | center | baseline | stretch;
+align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用
+align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+四、项目的属性
+order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
+align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+&lt;&#x2F;code&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;
+</body>
+</html>
