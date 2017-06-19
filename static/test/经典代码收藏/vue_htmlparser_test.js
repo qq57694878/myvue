@@ -1,7 +1,9 @@
 
 var parseHTML=require("./vue_htmlparser.js");
 var results = "";
-var template="<p>hello <b style='test foo' disabled align='b\"ar'>john <a href='http://ejohn.org/'>resig</b><img src=test.jpg></img><div>test</div><p>hello world";
+var template="<br></br><p>hello <b style='test foo' disabled align='b\"ar'>john <a href='http://ejohn.org/'>resig</b><img src=test.jpg></img><div>test</div><p>hello world";
+template="<br></br><p>hello <b style='test foo' disabled align='b\"ar'>john <a href='http://ejohn.org/'>resig</b><img src=test.jpg></img><div>test</div><p>hello world";
+template="<input type='text'/>12345";
 
 parseHTML(template, {
   start: function( tag, attrs, unary ) {
@@ -24,4 +26,5 @@ parseHTML(template, {
 
 });
 console.log( results);
+
 
