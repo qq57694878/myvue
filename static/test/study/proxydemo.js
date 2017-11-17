@@ -28,4 +28,18 @@ function createArray(...elements) {
 }
 
 let arr = createArray('a', 'b', 'c');
-arr[-1] // c
+arr[-1]; // c
+var myObject = {
+  foo: 1,
+  bar: 2,
+  get baz() {
+    return this.foo + this.bar;
+  },
+}
+
+Reflect.get(myObject, 'foo') // 1
+Reflect.get(myObject, 'bar') // 2
+Reflect.get(myObject, 'baz') // 3
+Reflect.defineProperty(myObject,'ljl','lijinliang');
+
+Reflect.get(myObject,'ljl');
