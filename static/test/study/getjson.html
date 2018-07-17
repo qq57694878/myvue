@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    const getJSON = function(url) {
+      const promise = new Promise(function(resolve, reject){
+        const handler = function() {
+          if (this.readyState !== 4) {
+            return;
+          }
+          if (this.status === 200) {
+            resolve(this.response);
+          } else {
+            reject(new Error(this.statusText));
+          }
+        };
+        const client = new XMLHttpRequest();
+        client.open("GET", url);
+        client.onreadystatechange = handler;
+        client.responseType = "json";
+        client.setRequestHeader("Accept", "application/json");
+ /*       client.setRequestHeader('content-type','application/json;charset=utf8');
+        client.setRequestHeader('Access-Control-Allow-Origin','*');
+        client.setRequestHeader('Access-Control-Allow-Methods','POST');
+        client.setRequestHeader('Access-Control-Allow-Headers','x-requested-with,content-type');*/
+        client.send();
+      });
+
+      return promise;
+    };
+
+    const postJSON = function(url,data) {
+      const promise = new Promise(function(resolve, reject){
+        const handler = function() {
+          if (this.readyState !== 4) {
+            return;
+          }
+          if (this.status === 200) {
+            resolve(this.response);
+          } else {
+            reject(new Error(this.statusText));
+          }
+        };
+        const client = new XMLHttpRequest();
+        client.open("POST", url);
+        client.onreadystatechange = handler;
+        client.responseType = "json";
+        client.setRequestHeader("Accept", "application/json");
+        client.send(data||null);
+      });
+
+      return promise;
+    };
+//http://www.weather.com.cn/data/sk/101010100.html
+//http://www.sojson.com/open/api/weather/json.shtml?city=%s
+    getJSON("http://127.0.0.1:8888/json").then(function(json) {
+      console.log('Contents: ' + JSON.stringify(json));
+    }, function(error) {
+      console.log('出错了', error);
+    });
+    var postData={"name":"lijinliang","age":"30"};
+    postJSON("http://127.0.0.1:8888/postjson",JSON.stringify(postData)).then(function(json) {
+      var data = JSON.parse(json);
+      console.log('Contents: ' + data.name);
+    }, function(error) {
+      console.log('出错了', error);
+    });
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
