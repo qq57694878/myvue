@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    .arrow-left{
+
+    }
+    .arrow-left:after{
+      display:  inline-block;
+      content:"";
+      width:20px;
+      height:20px;
+      border-width:4px 4px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+      transform: rotate(-135deg);
+      margin-left:20px;
+    }
+    .arrow-right{
+
+    }
+    .arrow-right:after{
+      display:  inline-block;
+      content:"";
+      width:20px;
+      height:20px;
+      border-width:4px 4px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+      transform: rotate(45deg);
+      margin-left:20px;
+    }
+    .arrow-down{
+
+    }
+    .arrow-down:after{
+      display:  inline-block;
+      content:"";
+      width:20px;
+      height:20px;
+      border-width:4px 4px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+      transform: rotate(135deg);
+      margin-left:20px;
+    }
+    .arrow-top{
+
+    }
+    .arrow-top:after{
+      display:  inline-block;
+      content:"";
+      width:20px;
+      height:20px;
+      border-width:4px 4px 0 0;
+      border-style: solid;
+      border-color: #ccc;
+      transform: rotate(-45deg);
+      margin-left:20px;
+    }
+    .arrow-left-solid{
+
+    }
+    .arrow-left-solid:after{
+      width:0px;
+      height:0px;
+      border-left:10px solid transparent;
+      border-right:10px solid #000;
+      border-bottom:10px solid transparent;
+      border-top:10px solid transparent;
+      content:"";
+      display:  inline-block;
+    }
+    .dialog{
+      border-radius:10px;
+      position: relative;
+      border:1px solid #ccc;
+      width:200px;
+      height:100px;
+     margin-left:10px;
+    }
+    .dialog:before{
+      content:"";
+      position: absolute;
+      background: #ccc;
+      width:20px;
+      height:20px;
+      transform: rotate(45deg);
+      top:90px;
+      left:90px;
+    }
+    .dialog:after{
+      content:"";
+      position: absolute;
+      background: #fff;
+      width:20px;
+      height:20px;
+      transform: rotate(45deg);
+      top:89px;
+      left:90px;
+
+    }
+
+
+
+  </style>
+</head>
+<body>
+<ul>
+  <li class="arrow-left">left</li>
+  <li class="arrow-right">right</li>
+  <li class="arrow-down">down</li>
+  <li class="arrow-top">left</li>
+</ul>
+
+<ul>
+  <li class="arrow-left-solid">left</li>
+  <li class="arrow-right-solid">right</li>
+  <li class="arrow-down-solid">down</li>
+  <li class="arrow-top-solid">left</li>
+</ul>
+<div class="dialog">
+
+</div>
+
+</body>
+</html>
